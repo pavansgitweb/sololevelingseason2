@@ -1,1 +1,417 @@
-<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo Leveling Season 2 Episode 11 | Hunter Stream</title>
+  <style>
+    :root {
+      --primary-color: #6c12c9;
+      --secondary-color: #370966;
+      --accent-color: #aa52ff;
+      --text-color: #f0f0f0;
+      --bg-dark: #121212;
+      --bg-darker: #0a0a0a;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-color);
+    }
+    
+    .header {
+      background-color: var(--bg-darker);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+    
+    .logo span {
+      color: var(--accent-color);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: width 0.3s;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .banner {
+      width: 100%;
+      height: 350px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/350');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .banner p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .banner-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .banner-btn:hover {
+      background-color: var(--accent-color);
+    }
+    
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+    }
+    
+    .video-container {
+      width: 100%;
+      position: relative;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      margin-bottom: 2rem;
+      background-color: var(--bg-darker);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .player-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .custom-player {
+      width: 100%;
+      height: 100%;
+      outline: none;
+    }
+    
+    .video-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      background-color: var(--bg-darker);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    
+    .episode-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .episode-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    .episode-meta {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    
+    .player-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .control-btn {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background-color 0.3s;
+    }
+    
+    .control-btn:hover {
+      background-color: var(--primary-color);
+    }
+    
+    .episode-description {
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .more-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    
+    .info-card {
+      background-color: var(--bg-darker);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .info-card h3 {
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .info-list {
+      list-style: none;
+    }
+    
+    .info-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .info-list li span:last-child {
+      color: #aaa;
+    }
+    
+    .recommendation-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    
+    .recommendation {
+      background-color: var(--bg-darker);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    
+    .recommendation:hover {
+      transform: translateY(-5px);
+    }
+    
+    .recommendation img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .recommendation-title {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .banner h1 {
+        font-size: 2rem;
+      }
+      
+      .episode-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#" class="logo">Hunter<span>Stream</span></a>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Anime</a>
+        <a href="#">Schedule</a>
+        <a href="#">News</a>
+        <a href="#">My List</a>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="banner">
+    <h1>Solo Leveling</h1>
+    <p>Season 2 Episode 11: Arise from the Shadow</p>
+    <button class="banner-btn">Start Watching</button>
+  </div>
+  
+  <main class="main-content">
+    <div class="video-container">
+      <div class="player-wrapper">
+        <video class="custom-player" controls poster="/api/placeholder/1280/720">
+          <source src="solo_leveling_s2e11.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    
+    <div class="video-controls">
+      <div class="episode-info">
+        <div>
+          <div class="episode-title">Season 2, Episode 11</div>
+          <div class="episode-meta">Released: March 15, 2025 • 24 min</div>
+        </div>
+      </div>
+      
+      <div class="player-buttons">
+        <button class="control-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+          </svg>
+          Next Episode
+        </button>
+        <button class="control-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+          </svg>
+          Add to Favorites
+        </button>
+      </div>
+    </div>
+    
+    <div class="episode-description">
+      <h2>Episode Summary</h2>
+      <p>Sung Jin-Woo continues to develop his shadow powers to their fullest potential after his confrontation with the Architect. As he begins to understand the true nature of the System and his role as the Shadow Monarch, a new threat emerges from the high-rank dungeons appearing worldwide. Meanwhile, the Hunter Association is growing increasingly suspicious of Jin-Woo's rapidly growing abilities.</p>
+      <p>This episode focuses on Jin-Woo's journey of self-discovery as he contemplates the consequences of his growing power and the responsibility it brings. Key battles and revelations set the stage for the season's climactic finale.</p>
+    </div>
+    
+    <div class="more-info">
+      <div class="info-card">
+        <h3>Episode Details</h3>
+        <ul class="info-list">
+          <li><span>Title:</span> <span>Arise from the Shadow</span></li>
+          <li><span>Season:</span> <span>2</span></li>
+          <li><span>Episode:</span> <span>11</span></li>
+          <li><span>Air Date:</span> <span>March 15, 2025</span></li>
+          <li><span>Duration:</span> <span>24 minutes</span></li>
+          <li><span>Rating:</span> <span>4.9/5</span></li>
+        </ul>
+      </div>
+      
+      <div class="info-card">
+        <h3>Season 2 Schedule</h3>
+        <ul class="info-list">
+          <li><span>Episode 12:</span> <span>March 22, 2025</span></li>
+          <li><span>Episode 13:</span> <span>March 29, 2025</span></li>
+          <li><span>Episode 14:</span> <span>April 5, 2025</span></li>
+          <li><span>Episode 15:</span> <span>April 12, 2025</span></li>
+          <li><span>Season Finale:</span> <span>April 19, 2025</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <h2 style="margin: 2rem 0 1rem;">You May Also Like</h2>
+    <div class="recommendation-list">
+      <div class="recommendation">
+        <img src="/api/placeholder/200/300" alt="Anime recommendation">
+        <div class="recommendation-title">Tower of God</div>
+      </div>
+      <div class="recommendation">
+        <img src="/api/placeholder/200/300" alt="Anime recommendation">
+        <div class="recommendation-title">The God of High School</div>
+      </div>
+      <div class="recommendation">
+        <img src="/api/placeholder/200/300" alt="Anime recommendation">
+        <div class="recommendation-title">Jujutsu Kaisen</div>
+      </div>
+      <div class="recommendation">
+        <img src="/api/placeholder/200/300" alt="Anime recommendation">
+        <div class="recommendation-title">Demon Slayer</div>
+      </div>
+    </div>
+  </main>
+  
+  <script>
+    // Simple script to make the "Start Watching" button scroll to the video player
+    document.querySelector('.banner-btn').addEventListener('click', function() {
+      document.querySelector('.video-container').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // This would be where you'd implement additional functionality like:
+    // - User authentication
+    // - Video quality selector
+    // - Remembering watch position
+    // - Tracking watch history
+    // - Adding to favorites functionality
+  </script>
+</body>
+</html>
